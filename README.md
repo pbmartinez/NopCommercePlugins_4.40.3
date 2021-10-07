@@ -1,1 +1,1 @@
-# NopCommercePlugin_4.40.3
+# NopCommercePlugins_4.40.3
