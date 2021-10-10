@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Payment methods",
+  "FriendlyName": "EnZona",
+  "SystemName": "Payments.EnZona",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.40" ],
+  "Author": "Pablo B. Martinez Pedroso",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Payments.EnZona.dll",
+  "Description": "Realizar pagos por la pasarela EnZona"
+}

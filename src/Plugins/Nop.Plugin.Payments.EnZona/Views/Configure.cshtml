@@ -1,0 +1,148 @@
+﻿@model Nop.Plugin.Payments.EnZona.Models.ConfigurationModel
+@inject Nop.Core.IWebHelper webHelper
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+@await Component.InvokeAsync("StoreScopeConfiguration")
+
+
+<form asp-controller="PaymentEnZona" asp-action="Configure" method="post">
+    <div class="cards-group">
+        <div class="card card-default">
+            <div class="card-body">
+                @Html.Raw(T("Plugins.Payments.EnZona.Instructions", $"{webHelper.GetStoreLocation()}Plugins/PaymentEnZonaPlugin/Complete"))
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="UseSandbox_OverrideForStore" asp-input="UseSandbox" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="UseSandbox" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="UseSandbox" />
+                        <span asp-validation-for="UseSandbox"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="PassProductNamesAndTotals_OverrideForStore" asp-input="PassProductNamesAndTotals" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="PassProductNamesAndTotals" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="PassProductNamesAndTotals" />
+                        <span asp-validation-for="PassProductNamesAndTotals"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="AdditionalFee_OverrideForStore" asp-input="AdditionalFee" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="AdditionalFee" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="AdditionalFee" />
+                        <span asp-validation-for="AdditionalFee"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="AdditionalFeePercentage_OverrideForStore" asp-input="AdditionalFeePercentage" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="AdditionalFeePercentage" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="AdditionalFeePercentage" />
+                        <span asp-validation-for="AdditionalFeePercentage"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="SandboxApiPaymentUrl_OverrideForStore" asp-input="SandboxApiPaymentUrl" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="SandboxApiPaymentUrl" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="SandboxApiPaymentUrl" />
+                        <span asp-validation-for="SandboxApiPaymentUrl"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="ApiPaymentUrl_OverrideForStore" asp-input="ApiPaymentUrl" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="ApiPaymentUrl" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ApiPaymentUrl" />
+                        <span asp-validation-for="ApiPaymentUrl"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="CodedCredentials_OverrideForStore" asp-input="CodedCredentials" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="CodedCredentials" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="CodedCredentials" />
+                        <span asp-validation-for="CodedCredentials"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="SandboxApiTokenUrl_OverrideForStore" asp-input="SandboxApiTokenUrl" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="SandboxApiTokenUrl" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="SandboxApiTokenUrl" />
+                        <span asp-validation-for="SandboxApiTokenUrl"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="ApiTokenUrl_OverrideForStore" asp-input="ApiTokenUrl" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="ApiTokenUrl" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ApiTokenUrl" />
+                        <span asp-validation-for="ApiTokenUrl"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="MerchantOpId_OverrideForStore" asp-input="MerchantOpId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="MerchantOpId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="MerchantOpId" />
+                        <span asp-validation-for="MerchantOpId"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="WaitingTime_OverrideForStore" asp-input="WaitingTime" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="WaitingTime" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="WaitingTime" />
+                        <span asp-validation-for="WaitingTime"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="RetryTimes_OverrideForStore" asp-input="RetryTimes" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="RetryTimes" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="RetryTimes" />
+                        <span asp-validation-for="RetryTimes"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-9 offset-md-3">
+                        <button type="submit" name="save" class="btn btn-primary">@T("Admin.Common.Save")</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language Name="English" SupportedVersion="4.40">
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.AdditionalFee">
+    <Value>Additional Fee</Value>
+  </LocaleResource>
+  
+   <LocaleResource Name="Plugins.Payments.EnZona.Fields.AdditionalFee.Hint">
+    <Value>Additional fee to charge the client.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.AdditionalFeePercentage">
+    <Value>Additional fee. Use percentage.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.AdditionalFeePercentage.Hint">
+    <Value>Determine wether if apply additional fee to total order. If not set, fixed value will be use.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.PassProductNamesAndTotals">
+    <Value>Send details of order</Value>
+  </LocaleResource>
+   
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.PassProductNamesAndTotals.Hint">
+    <Value>Determines if purchase details are sent to EnZona</Value>
+  </LocaleResource>
+   
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.RedirectionTip">
+    <Value>You will be redirected to the EnZona site to complete the order.</Value>
+  </LocaleResource>
+   
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.UseSandbox">
+    <Value>Use Sandbox</Value>
+  </LocaleResource>
+   
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.UseSandbox.Hint">
+    <Value>Check to enable Sandbox (test environment).</Value>
+  </LocaleResource>
+   
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.SandboxApiPaymentUrl">
+    <Value>URL of Sandbox.</Value>
+  </LocaleResource>
+   
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.SandboxApiPaymentUrl.Hint">
+    <Value>URL of Sandbox of Api payment. (test environment).</Value>
+  </LocaleResource>
+   
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.ApiPaymentUrl">
+    <Value>EnZona URL of Api payment.</Value>
+  </LocaleResource>
+   
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.ApiPaymentUrl.Hint">
+    <Value>EnZona URL of Api payment(real environment).</Value>
+  </LocaleResource>
+   
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.SandboxApiTokenUrl">
+    <Value>URL of Token Sandbox.</Value>
+  </LocaleResource>
+   
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.SandboxApiTokenUrl.Hint">
+    <Value>URL of Token Sandbox. (test environment).</Value>
+  </LocaleResource>
+   
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.ApiTokenUrl">
+    <Value>URL of Token.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.ApiTokenUrl.Hint">
+    <Value>EnZona URL for managing the real environment Token.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.CodedCredentials">
+    <Value>Credentials</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.CodedCredentials.Hint">
+    <Value>Your credentials encoded on a 64 bit basis.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.MerchantOpId">
+    <Value>Trade Id</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.MerchantOpId.Hint">
+    <Value>Operation Id of the Registered Merchant.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.ErrorCancellingPaidOrders">
+    <Value>Paid orders cannot be canceled.</Value>
+  </LocaleResource>
+
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.ErrorPayingCancelledOrders">
+    <Value>Canceled orders cannot be Paid. Try adding a new order. </Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.ErrorResourceNotFound">
+    <Value>The requested resource does not exist.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.SuccessOrderCancellation">
+    <Value>The order has been successfully canceled.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.SuccessOrderCompletion">
+    <Value>The order has been completed successfully.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.RangeOnPercentage">
+    <Value>The percent range is invalid.</Value>
+  </LocaleResource>
+
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.NullObject">
+    <Value>The resource cannt be null {0}.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.ErrorOnRetry">
+    <Value>{0}. Trying {1} {2} of {3}. Waiting {4} seconds to try again.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.ErrorOnRequest">
+    <Value>EnZona server cant be reached in order to perform the payment.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.InvalidCredentials">
+    <Value>The merchant credentials provided to EnZona are not valid.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.Forbidden">
+    <Value>The merchant credentials provided do not have permission to access the requested resource.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.UnavailableService">
+    <Value>EnZona service is not available.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.SomethingHappen">
+    <Value>An error has occurred.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Plugins.Payments.EnZona.Labels.Invoice">
+    <Value>Invoice</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Labels.Transaction">
+    <Value>Transaction</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Labels.Order">
+    <Value>Order</Value>
+  </LocaleResource>
+
+
+</Language>

@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Hello World Widget",
+  "SystemName": "Widgets.HelloWorld",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.40" ],
+  "Author": "Pablo B. Martinez Pedroso",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.HelloWorld.dll",
+  "Description": "Desplega un mensaje especificado al cliente autenticado"
+}

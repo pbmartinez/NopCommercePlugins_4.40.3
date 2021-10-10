@@ -1,0 +1,63 @@
+﻿@inject Nop.Core.IWebHelper _webHelper; 
+@using Nop.Web.Framework.Models.DataTables
+@{
+    Layout = "_ConfigurePlugin";
+    var url = $"{_webHelper.GetStoreLocation()}Admin/EnZonaPaymentResponse/Get";
+}
+
+@await Html.PartialAsync("Table", new DataTablesModel
+{
+    Name = "paymentResponse-grid",
+    
+    UrlRead = new DataUrl(url),
+    Paging = true,
+    ColumnCollection = new List<ColumnProperty>
+    {
+        new ColumnProperty(nameof(PaymentResponse.Id))
+        {
+            Title = "Id",
+            
+        },
+        new ColumnProperty(nameof(PaymentResponse.CreatedAt))
+        {
+            Title = "Fecha",
+            Width = "100"
+        },
+        new ColumnProperty(nameof(PaymentResponse.InvoiceNumber))
+        {
+            Title = "Factura",
+            Width = "100"
+        },
+        new ColumnProperty(nameof(PaymentResponse.TransactionUuid))
+        {
+            Title = "Transaccion",
+            Width = "100"
+        },
+        new ColumnProperty(nameof(PaymentResponse.Currency))
+        {
+            Title = "Moneda",
+            Width = "100"
+        },
+        new ColumnProperty(nameof(PaymentResponse.Commission))
+        {
+            Title = "Comision",
+            Width = "100"
+        },
+        new ColumnProperty(nameof(PaymentResponse.AmountAsJson))
+        {
+            Title = "Amount",
+            Width = "100"
+        },
+        new ColumnProperty(nameof(PaymentResponse.ItemsAsJson))
+        {
+            Title = "Items",
+            Width = "100"
+        },
+        new ColumnProperty(nameof(PaymentResponse.LinksAsJson))
+        {
+            Title = "Links",
+            Width = "100"
+        }
+
+    }
+})

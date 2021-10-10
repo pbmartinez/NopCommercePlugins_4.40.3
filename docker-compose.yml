@@ -1,0 +1,25 @@
+version: "3.4"
+services:
+    nopcommerce_web:
+        build: .
+        container_name: nopcommerce
+        ports:
+            - "80:80"
+            - "443:443"
+        depends_on:
+            - nopcommerce_database
+        restart: "always"
+        volumes:
+            - /var/lib/docker/volumes/webapp_data:/app
+    nopcommerce_database:
+        image: "mcr.microsoft.com/mssql/server:2019-latest"
+        container_name: nopcommerce_mssql_server
+        environment:
+            SA_PASSWORD: "Administrador*2020"
+            ACCEPT_EULA: "Y"
+            MSSQL_PID: "Express"
+        ports:
+            - "1433:1433"
+        restart: "always"
+        volumes:
+            - /var/lib/docker/volumes/mssql_data:/var/opt/mssql

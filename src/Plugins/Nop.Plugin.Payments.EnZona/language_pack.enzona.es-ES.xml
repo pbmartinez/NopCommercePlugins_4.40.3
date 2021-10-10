@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language Name="Español" SupportedVersion="4.40">
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.AdditionalFee">
+    <Value>Comisión adicional</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.AdditionalFee.Hint">
+    <Value>Entrar comisión adicional para cobrárselo a los clientes.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.AdditionalFeePercentage">
+    <Value>Comisión adicional. Usar porcentaje.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.AdditionalFeePercentage.Hint">
+    <Value>Determina si se aplica una tarifa adicional porcentual al total del pedido. Si no está habilitado, se usa un valor fijo.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.PassProductNamesAndTotals">
+    <Value>Enviar detalles de la compra</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.PassProductNamesAndTotals.Hint">
+    <Value>Determina si se envian los detalles de la compra a EnZona</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.RedirectionTip">
+    <Value>Será redirigido al sitio de EnZona para completar el pedido.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.UseSandbox">
+    <Value>Usar Sandbox</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.UseSandbox.Hint">
+    <Value>Marque para habilitar Sandbox (entorno de prueba).</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.SandboxApiPaymentUrl">
+    <Value>URL de Sandbox de Api de pago.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.SandboxApiPaymentUrl.Hint">
+    <Value>URL de Sandbox de Api de pago. (entorno de prueba).</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.ApiPaymentUrl">
+    <Value>URL de EnZona entorno real.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.ApiPaymentUrl.Hint">
+    <Value>URL de EnZona entorno real.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.SandboxApiTokenUrl">
+    <Value>URL de Token Sandbox.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.SandboxApiTokenUrl.Hint">
+    <Value>URL de Token Sandbox. (entorno de prueba).</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.ApiTokenUrl">
+    <Value>URL de Token entorno real.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.ApiTokenUrl.Hint">
+    <Value>URL de EnZona para el manejo del Token entorno real.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.CodedCredentials">
+    <Value>Credenciales</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.CodedCredentials.Hint">
+    <Value>Sus credenciales condificadas en base a 64 bit.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.MerchantOpId">
+    <Value>Id del Comercio</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Fields.MerchantOpId.Hint">
+    <Value>Id de Operación del Comercio Registrado.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.ErrorCancellingPaidOrders">
+    <Value>Las órdenes pagadas no pueden ser canceladas.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.ErrorPayingCancelledOrders">
+    <Value>Las órdenes canceladas no pueden ser pagadas. Intente adicionando una orden nueva. </Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.ErrorResourceNotFound">
+    <Value>El recurso solicitado no existe.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.SuccessOrderCancellation">
+    <Value>La orden ha sido cancelada correctamente.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.SuccessOrderCompletion">
+    <Value>La orden ha sido completada correctamente.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.RangeOnPercentage">
+    <Value>El rango de por ciento no es válido.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.NullObject">
+    <Value>El recurso no puede ser null {0}.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.ErrorOnRetry">
+    <Value>{0}. Intentando {1} {2} de {3}. Esperando {4} segundos para intentar de nuevo.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.ErrorOnRequest">
+    <Value>No es posible establecer comunicación con EnZona para realizar el pago.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.InvalidCredentials">
+    <Value>Las credenciales del comercio proporcionadas a EnZona no son válidas.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.Forbidden">
+    <Value>Las credenciales del comercio proporcionadas no cuenta con permiso para acceder al recurso solicitado.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.UnavailableService">
+    <Value>El servicio de EnZona no se encuentra disponible.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Messages.SomethingHappen">
+    <Value>Ha ocurrido un error.</Value>
+  </LocaleResource>
+
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Labels.Invoice">
+    <Value>Factura</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Labels.Transaction">
+    <Value>Transacción</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Plugins.Payments.EnZona.Labels.Order">
+    <Value>Orden</Value>
+  </LocaleResource>
+
+
+
+
+
+  <!--Sobreescribir los valores que tiene por defecto-->
+  <LocaleResource Name="checkout">
+    <Value>Pagar</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="checkout.button">
+    <Value>Pagar</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="pagetitle.checkout">
+    <Value>Facturación</Value>
+  </LocaleResource>
+
+  <!--Arreglar los link al adicionar al carrito de (compra, comparacion y wishlist)-->
+  <LocaleResource Name="products.producthasbeenaddedtothecart.link">
+    <Value>
+      <![CDATA[El producto se ha añadido a su <a href = "{0}">carrito de la compra</a>]]>
+    </Value>
+  </LocaleResource>
+
+  <LocaleResource Name="products.producthasbeenaddedtocomparelist.link">
+    <Value>
+      <![CDATA[El producto se ha añadido a su <a href = "{0}">comparación de productos</a>]]>
+    </Value>
+  </LocaleResource>
+
+  <LocaleResource Name="products.producthasbeenaddedtothewishlist.link">
+    <Value>
+      <![CDATA[El producto se ha añadido a su <a href = "{0}">lista de deseos</a>]]>
+    </Value>
+  </LocaleResource>
+
+
+</Language>
+
