@@ -142,8 +142,14 @@ namespace Nop.Plugin.Payments.EnZona.Controllers
 
         #region Payment
 
+        //Los endpoints Complete y Cancel se configuran como callbacks en la pasarela de pago
+        //Estos endpoints se invocan desde la pasarela de pago indicando si el paso fue exitoso o cancelado
+        //En estos endpoints se actualiza el estado de la orden en la base de datos de nopcommerce
+        //Son el 3er paso del proceso de pago iniciando el 1 y 2 en el plugin de pago
+
         /// <summary>
-        /// 
+        /// Endpoint configurado como callback que se invoka desde la pasarela de pago indicando por esta que el paso fue exitoso
+        /// Aqui se marca la orden como pagada y se actualiza en la base de datos de nopcommerce
         /// </summary>
         /// <param name="transaction_uuid"></param>
         /// <returns></returns>
@@ -177,6 +183,12 @@ namespace Nop.Plugin.Payments.EnZona.Controllers
             return RedirectToRoute("OrderDetails", new { orderId = order.Id });
         }
 
+        /// <summary>
+        /// Endpoint configurado como callback que se invoka desde la pasarela de pago indicando por esta que el paso fue cancelado
+        /// Aqui se marca la orden como cancelada y se actualiza en la base de datos de nopcommerce
+        /// </summary>
+        /// <param name="transaction_uuid"></param>
+        /// <returns></returns>
         public async Task<IActionResult> Cancel(string transaction_uuid)
         {
             if (string.IsNullOrEmpty(transaction_uuid) || string.IsNullOrWhiteSpace(transaction_uuid))

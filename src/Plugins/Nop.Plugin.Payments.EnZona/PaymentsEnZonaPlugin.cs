@@ -232,16 +232,24 @@ namespace Nop.Plugin.Payments.EnZona
 
         public async Task PostProcessPaymentAsync(PostProcessPaymentRequest postProcessPaymentRequest)
         {
+            //2do paso en el payment process
             var paymentResponse = await _paymentReponseService.GetByTransaccionUuid(postProcessPaymentRequest.Order.AuthorizationTransactionId);
             var links = JsonConvertExtensions.DeserializeForApiEnZona<List<Link>>(paymentResponse.LinksAsJson);
 
+            //cada pago se crea con varios links, uno de ellos es el de confirmar el pago
+            //que es a donde se redirige al cliente para que complete el pago
             var link = links.FirstOrDefault(l => l.Rel == LinkRelation.confirm.ToString());
             _httpContextAccessor.HttpContext.Response.Redirect(link.Href);
             await Task.CompletedTask;
+            //3er paso en el payment process se concreta en el PaymentEnZonaController
+            //al recibir la respuesta de la pasarela de pago
+            //ya sea success or fail en Complete or Cancel respectivamente, actualizando el payment en la base de datos de nopcommerce
         }
 
         public async Task<ProcessPaymentResult> ProcessPaymentAsync(ProcessPaymentRequest processPaymentRequest)
         {
+            //1er paso en el payment process
+            //este paso se ejecuta primero que el PostProcessPaymentAsync
             try
             {
                 var processPaymentResult = new ProcessPaymentResult();
@@ -251,12 +259,14 @@ namespace Nop.Plugin.Payments.EnZona
                 if (resultToken.Success && resultToken.StatusCode == HttpStatusCode.OK)
                 {
                     var pago = await _paymentDetailsService.GetPaymentAsync(processPaymentRequest);
-                    
+
+                    //aqui se crea el pago en la pasarela de pago
                     var resultPayment = await _enZonaHttpClient.CreatePaymentAsync(null, pago, accessToken: resultToken.Value.AccessToken);
                     switch (resultPayment.StatusCode)
                     {
                         case HttpStatusCode.OK:
                             processPaymentResult.AuthorizationTransactionId = resultPayment.Value.TransactionUuid;
+                            //en caso de que se haya creado el pago correctamente en la pasarela se guarda en la base de datos de nopcommerce
                             await _paymentReponseService.InsertAsync(resultPayment.Value);
                             break;
 
